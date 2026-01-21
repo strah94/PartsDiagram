@@ -1,7 +1,14 @@
+import { MantineProvider } from "@mantine/core";
 import "./App.css";
+import Home from "./pages/Home";
+import { theme } from "./theme";
 
 function App() {
-  return <></>;
+  return (
+    <MantineProvider theme={theme}>
+      <Home />
+    </MantineProvider>
+  );
 }
 
 export default App;
