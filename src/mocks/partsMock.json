@@ -1,0 +1,97 @@
+[
+  {
+    "id": "part-001",
+    "name": "Mounting Bracket",
+    "status": "Approved",
+    "supplier": "Internal",
+    "material": "Aluminum 6061",
+    "weight": 0.85,
+    "critical": true,
+    "lastUpdated": "2024-05-10T14:32:00Z",
+    "geometry": {
+      "width": 120,
+      "height": 80,
+      "holes": [
+        { "x": 20, "y": 20, "diameter": 10 },
+        { "x": 100, "y": 20, "diameter": 10 },
+        { "x": 60, "y": 60, "diameter": 16 }
+      ]
+    }
+  },
+  {
+    "id": "part-002",
+    "name": "Gear Housing",
+    "status": "In Review",
+    "supplier": "Acme Manufacturing",
+    "material": "Steel",
+    "weight": 2.4,
+    "critical": false,
+    "lastUpdated": "2024-05-12T09:10:00Z",
+    "geometry": {
+      "width": 200,
+      "height": 150,
+      "holes": [
+        { "x": 40, "y": 40, "diameter": 12 },
+        { "x": 160, "y": 40, "diameter": 12 }
+      ]
+    }
+  },
+  {
+    "id": "part-003",
+    "name": "Support Plate",
+    "status": "Approved",
+    "supplier": "Internal",
+    "material": "Stainless Steel",
+    "weight": 1.2,
+    "critical": true,
+    "lastUpdated": "2024-05-14T11:45:00Z",
+    "geometry": {
+      "width": 180,
+      "height": 120,
+      "holes": [
+        { "x": 30, "y": 30, "diameter": 8 },
+        { "x": 150, "y": 30, "diameter": 8 },
+        { "x": 90, "y": 90, "diameter": 14 }
+      ]
+    }
+  },
+  {
+    "id": "part-004",
+    "name": "Motor Cover",
+    "status": "Rejected",
+    "supplier": "Delta Metals",
+    "material": "ABS Plastic",
+    "weight": 0.6,
+    "critical": false,
+    "lastUpdated": "2024-05-15T16:05:00Z",
+    "geometry": {
+      "width": 160,
+      "height": 140,
+      "holes": [
+        { "x": 40, "y": 40, "diameter": 6 },
+        { "x": 120, "y": 40, "diameter": 6 },
+        { "x": 80, "y": 110, "diameter": 10 }
+      ]
+    }
+  },
+  {
+    "id": "part-005",
+    "name": "Base Frame",
+    "status": "In Review",
+    "supplier": "Omega Fabrication",
+    "material": "Carbon Steel",
+    "weight": 5.75,
+    "critical": true,
+    "lastUpdated": "2024-05-18T08:20:00Z",
+    "geometry": {
+      "width": 300,
+      "height": 220,
+      "holes": [
+        { "x": 50, "y": 50, "diameter": 18 },
+        { "x": 250, "y": 50, "diameter": 18 },
+        { "x": 50, "y": 170, "diameter": 18 },
+        { "x": 250, "y": 170, "diameter": 18 }
+      ]
+    }
+  }
+]
