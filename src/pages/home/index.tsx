@@ -1,10 +1,14 @@
-import { Text } from "@mantine/core";
+import { Flex } from "@mantine/core";
+import PartsList from "./components/PartList";
 
 const Home = () => {
   return (
-    <Text fz={20} c={"white"}>
-      HOME PAGE
-    </Text>
+    <Flex w={"100%"} h={"100%"}>
+      <Flex flex={1}>
+        <PartsList />
+      </Flex>
+      <Flex direction={"column"} justify={"space-between"} flex={3}></Flex>
+    </Flex>
   );
 };
 
