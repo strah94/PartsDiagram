@@ -13,8 +13,6 @@ const List = <TBase extends IPart>({ data, renderItem }: IProps<TBase>) => {
       direction={"column"}
       w={"100%"}
       bg={"black"}
-      p={10}
-      gap={10}
       className="list-container"
     >
       {data.map((e) => renderItem(e))}

@@ -19,7 +19,7 @@ const enumToKeyMap: Record<PartDetailsEnum, keyof IPart> = {
 };
 
 const PartDetails = () => {
-  const { selectedPart } = usePartStore();
+  const { selectedPart, setStatusPart } = usePartStore();
 
   const details = useMemo(() => {
     return Object.values(PartDetailsEnum).map((value) => {
@@ -30,13 +30,19 @@ const PartDetails = () => {
               key={value}
               data={Object.values(PartStatusEnum)}
               value={selectedPart?.status}
+              onChange={(value) => setStatusPart(value as PartStatusEnum)}
+              bg={"var(--mantine-color-dark-6)"}
+              c={"white"}
             />
           );
         default:
           return (
-            <Text key={value}>{`${value}: ${
-              selectedPart?.[enumToKeyMap[value]]
-            }`}</Text>
+            <Flex gap={10}>
+              <Text key={value} c={"white"}>{`${value}:`}</Text>
+              <Text key={value} c={"gray"}>{` ${
+                selectedPart?.[enumToKeyMap[value]]
+              }`}</Text>
+            </Flex>
           );
       }
     });
@@ -50,6 +56,7 @@ const PartDetails = () => {
         justify={"center"}
         h={"100%"}
         style={{ opacity: 0.6 }}
+        bg={"var(--mantine-color-dark-9)"}
       >
         <Text c={"gray"} size="lg">
           No part selected
@@ -64,7 +71,14 @@ const PartDetails = () => {
   return (
     <>
       {selectedPart ? (
-        <Flex direction={"column"} h={"100%"}>
+        <Flex
+          direction={"column"}
+          h={"100%"}
+          bg={"var(--mantine-color-dark-9)"}
+          color="white"
+          p={20}
+          gap={10}
+        >
           {details}
         </Flex>
       ) : (

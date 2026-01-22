@@ -1,3 +1,12 @@
+.list-container {
+  background-color: var(--mantine-color-dark-9) !important;
+  border: 1px solid var(--mantine-color-dark-12) !important;
+}
+
 .list-container:hover {
   cursor: default;
+}
+
+.list-container > *:hover {
+  background-color: var(--mantine-color-dark-6);
 }
