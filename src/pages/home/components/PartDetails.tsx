@@ -42,10 +42,35 @@ const PartDetails = () => {
     });
   }, [selectedPart]);
 
+  const renderEmptyState = () => {
+    return (
+      <Flex
+        direction={"column"}
+        align={"center"}
+        justify={"center"}
+        h={"100%"}
+        style={{ opacity: 0.6 }}
+      >
+        <Text c={"gray"} size="lg">
+          No part selected
+        </Text>
+        <Text c={"gray"} size="sm" mt="xs">
+          Select a part from the list to view details
+        </Text>
+      </Flex>
+    );
+  };
+
   return (
-    <Flex direction={"column"} h={"100%"}>
-      {details}
-    </Flex>
+    <>
+      {selectedPart ? (
+        <Flex direction={"column"} h={"100%"}>
+          {details}
+        </Flex>
+      ) : (
+        renderEmptyState()
+      )}
+    </>
   );
 };
 
